@@ -1,9 +1,6 @@
-const { theme } = require("../../tailwind.config");
-
 document.addEventListener('DOMContentLoaded', () => {
-    const themeToggleBtn = document.getEelementById('theme-toggle');
+    const themeToggleBtn = document.getElementById('theme-toggle');
     const htmlElement = document.documentElement;
-
     const applySavedTheme = () => {
         const savedTheme = localStorage.getItem('theme');
         if (savedTheme === 'dark') {
@@ -21,7 +18,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
     themeToggleBtn.addEventListener('click', () => {
         htmlElement.classList.toggle('dark');
-
         if (htmlElement.classList.contains('dark')) {
             localStorage.setItem('theme', 'dark');
         } else {
